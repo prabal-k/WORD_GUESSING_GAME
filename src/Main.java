@@ -1,8 +1,12 @@
 import java.util.Random;
 
 public class Main {
-    public static void main(String[] args) {
-        String arr[] = {"Simultaneously"};
+    static String[] arr = {"Simultaneously","Battleroyal","Arbitary","Disinterested"};
+    public static void main(String[] args)
+
+    {
+        System.out.println("\n\t\tWELCOME TO THE WORD GUESSING GAME\n ");
+
         Random random = new Random();
         int x = random.nextInt(arr.length);
         System.out.println(x);
@@ -12,11 +16,12 @@ public class Main {
 
         //String str = new String(character2); //TO convert array of character to string;
         int j=1;
+        System.out.println("\t\t");
         for (int i = 0; i < character.length; i++)
         {
             for(j=1;j<character.length;j=j+2)   //TO HIDE CERTAIN CHARACTER WITH * WE USED 2ND LOOP OF J
             {
-                character[j] = '*';                 //TO HIDE THE CHARACTERS
+                character[j] = '_';                 //TO HIDE THE CHARACTERS
             }
             System.out.print(character[i]+" ");
         }
@@ -25,8 +30,10 @@ public class Main {
         for(int i=0;i<character.length/2;i++)
         {
             char[] character2 = arr2.toCharArray();
-            Obj.Input(character2);
+            Obj.Input(character,character2);
         }
+
+
 
     }
 }
